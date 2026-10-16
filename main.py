@@ -717,7 +717,7 @@ def main(page: ft.Page):
 
     # ---------- help / support ----------
     def open_help(e=None):
-        popup([T("Hum madad ke liye yahan hain 😊", 13, color=MUTED),
+        popup([T("We are here to help you 😊", 13, color=MUTED),
                ft.ListTile(leading=ft.Icon(ft.Icons.CHAT, color="#22c55e"), title=T("Chat on WhatsApp", 14, True),
                            on_click=lambda e: page.launch_url(WHATSAPP_URL)),
                ft.ListTile(leading=ft.Icon(ft.Icons.CALL, color=PRIMARY), title=T(SUPPORT_PHONE, 14, True),
