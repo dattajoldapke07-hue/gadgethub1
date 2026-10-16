@@ -77,9 +77,9 @@ COUPONS = {
 }
 
 REVIEWS = [
-    ("Rahul Sharma", "Delhi", "Delivery bahut fast thi aur product 100% original mila. Price bhi market se kam!"),
-    ("Priya Verma", "Mumbai", "Easy returns aur great support. Mera naya phone ekdum sealed aaya. Highly recommended."),
-    ("Aman Gupta", "Bengaluru", "Best deals on gaming gear. Checkout smooth tha aur packaging premium thi."),
+    ("Ashutosh More", "Delhi", "Delivery bahut fast thi aur product 100% original mila. Price bhi market se kam!"),
+    ("Vishal Kuntha", "Mumbai", "Easy returns aur great support. Mera naya phone ekdum sealed aaya. Highly recommended."),
+    ("Ajay Ibrampure", "Bengaluru", "Best deals on gaming gear. Checkout smooth tha aur packaging premium thi."),
 ]
 
 DATA_FILE = os.path.join(os.getenv("FLET_APP_STORAGE_DATA") or ".", "gadgethub.json")
