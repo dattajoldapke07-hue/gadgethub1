@@ -5,9 +5,9 @@ import flet as ft
 # ================= THEME =================
 PRIMARY, DARK, MUTED, BORDER, BG = "#2563eb", "#0f172a", "#64748b", "#e2e8f0", "#f8fafc"
 INDIGO, GREEN, AMBER, RED = "#4f46e5", "#16a34a", "#f59e0b", "#ef4444"
-SUPPORT_PHONE = "+91 919561560448"      # <- apna number daalein
+SUPPORT_PHONE = "+91 9561560448"      # <- apna number daalein
 SUPPORT_EMAIL = "support@gadgethub.in"  # <- apna email daalein
-WHATSAPP_URL = "https://wa.me/919561560448"  # <- apna WhatsApp number daalein
+WHATSAPP_URL = "https://wa.me/919561560448"  
 
 U = lambda i: f"https://images.unsplash.com/{i}?auto=format&fit=crop&w=800&q=80"
 S, L, A, G, W_, X = "Smartphones", "Laptops", "Audio", "Gaming", "Wearables", "Accessories"
@@ -125,6 +125,29 @@ def save(db):
             json.dump(db, f)
     except Exception:
         pass
+
+
+def luhn_ok(d):
+    s, alt = 0, False
+    for ch in reversed(d):
+        n = int(ch)
+        if alt:
+            n = n * 2 - 9 if n * 2 > 9 else n * 2
+        s += n
+        alt = not alt
+    return len(d) > 0 and s % 10 == 0
+
+
+def card_network(d):
+    if d.startswith(("34", "37")):
+        return "American Express"
+    if d.startswith("4"):
+        return "Visa"
+    if re.match(r"^(5[1-5]|2[2-7])", d):
+        return "Mastercard"
+    if re.match(r"^(60|65|81|82|508)", d):
+        return "RuPay"
+    return ""
 
 
 def end_of_day():
@@ -675,11 +698,79 @@ def main(page: ft.Page):
         ph_ = field("Mobile number", keyboard_type=ft.KeyboardType.PHONE, max_length=10, prefix_text="+91 ")
         addr = field("Full address", multiline=True, min_lines=2, max_lines=3)
         pin = field("Pincode", keyboard_type=ft.KeyboardType.NUMBER, max_length=6)
-        pay = ft.RadioGroup(value="Cash on Delivery", content=ft.Column([
+        sub, disc, ship, total = totals()
+
+        # ----- payment detail fields (UPI / Card) -----
+        upi_id = field("UPI ID (e.g. name@okhdfcbank)", keyboard_type=ft.KeyboardType.EMAIL, prefix_icon=ft.Icons.QR_CODE_2)
+        card_no = field("Card number", keyboard_type=ft.KeyboardType.NUMBER, max_length=19, prefix_icon=ft.Icons.CREDIT_CARD)
+        card_name = field("Name on card", capitalization=ft.TextCapitalization.WORDS)
+        card_exp = field("Expiry (MM/YY)", keyboard_type=ft.KeyboardType.NUMBER, max_length=5, expand=True)
+        card_cvv = field("CVV", password=True, keyboard_type=ft.KeyboardType.NUMBER, max_length=4, expand=True)
+
+        def fmt_card(e):
+            d = re.sub(r"\D", "", card_no.value or "")[:16]
+            card_no.value = " ".join(d[i:i + 4] for i in range(0, len(d), 4))
+            net = card_network(d)
+            card_no.helper_text = net if net else None
+            card_no.update()
+
+        def fmt_exp(e):
+            d = re.sub(r"\D", "", card_exp.value or "")[:4]
+            card_exp.value = d if len(d) <= 2 else d[:2] + "/" + d[2:]
+            card_exp.update()
+
+        def only_digits(e):
+            card_cvv.value = re.sub(r"\D", "", card_cvv.value or "")[:4]
+            card_cvv.update()
+
+        card_no.on_change, card_exp.on_change, card_cvv.on_change = fmt_card, fmt_exp, only_digits
+
+        upi_box = ft.Container(ft.Column([upi_id, T("🔒 We never ask for your UPI PIN.", 11, color=MUTED)], spacing=6),
+                               visible=False, bgcolor="#f8fafc", border=ft.border.all(1, BORDER), border_radius=12, padding=10)
+        card_box = ft.Container(ft.Column([card_no, card_name, ft.Row([card_exp, card_cvv], spacing=8),
+                                           T("🔒 Card details are used only to verify this order and are never saved.", 11, color=MUTED)],
+                                          spacing=8),
+                                visible=False, bgcolor="#f8fafc", border=ft.border.all(1, BORDER), border_radius=12, padding=10)
+
+        def on_pay_change(e):
+            upi_box.visible = pay.value == "UPI"
+            card_box.visible = pay.value == "Card"
+            page.update()
+
+        pay = ft.RadioGroup(value="Cash on Delivery", on_change=on_pay_change, content=ft.Column([
             ft.Radio(value="Cash on Delivery", label="💵 Cash on Delivery"),
             ft.Radio(value="UPI", label="📲 UPI (GPay / PhonePe / Paytm)"),
             ft.Radio(value="Card", label="💳 Credit / Debit Card")], spacing=0))
-        sub, disc, ship, total = totals()
+
+        def pay_error():
+            """Returns an error message if payment details are invalid, else None."""
+            if pay.value == "UPI":
+                if not re.fullmatch(r"[A-Za-z0-9._-]{2,64}@[A-Za-z]{2,32}", (upi_id.value or "").strip()):
+                    return "Enter a valid UPI ID (like name@okhdfcbank)"
+            elif pay.value == "Card":
+                digits = re.sub(r"\D", "", card_no.value or "")
+                if not (13 <= len(digits) <= 19) or not luhn_ok(digits):
+                    return "Enter a valid card number"
+                if len((card_name.value or "").strip()) < 3:
+                    return "Enter the name on your card"
+                m = re.fullmatch(r"(\d{2})/(\d{2})", card_exp.value or "")
+                if not m or not 1 <= int(m.group(1)) <= 12:
+                    return "Enter expiry as MM/YY"
+                now = datetime.now()
+                if (2000 + int(m.group(2)), int(m.group(1))) < (now.year, now.month):
+                    return "This card has expired"
+                need = 4 if card_network(digits) == "American Express" else 3
+                if not re.fullmatch(rf"\d{{{need}}}", card_cvv.value or ""):
+                    return f"Enter the {need}-digit CVV"
+            return None
+
+        def pay_label():
+            if pay.value == "UPI":
+                uid = upi_id.value.strip()
+                return f"UPI ({uid[:2]}***@{uid.split('@')[-1]})"
+            if pay.value == "Card":
+                return "Card •••• " + re.sub(r"\D", "", card_no.value)[-4:]
+            return pay.value
 
         def place(e):
             if not (nm.value or "").strip():
@@ -690,8 +781,12 @@ def main(page: ft.Page):
                 return toast("Enter your full address")
             if not re.fullmatch(r"\d{6}", pin.value or ""):
                 return toast("Enter a valid 6-digit pincode")
+            err = pay_error()
+            if err:
+                return toast(err)
+            label = pay_label()  # only a masked label is stored; card number/CVV/expiry are never saved
             oid = "GH" + datetime.now().strftime("%y%m%d%H%M%S")
-            order = {"id": oid, "date": datetime.now().strftime("%d %b %Y, %I:%M %p"), "pay": pay.value, "status": "Confirmed",
+            order = {"id": oid, "date": datetime.now().strftime("%d %b %Y, %I:%M %p"), "pay": label, "status": "Confirmed",
                      "total": total, "items": [[BY[int(k)]["name"], q, BY[int(k)]["price"]] for k, q in db["cart"].items()],
                      "address": f"{addr.value.strip()} - {pin.value}", "name": nm.value.strip(), "phone": ph_.value}
             db["orders"].setdefault(db["user"], []).insert(0, order)
@@ -701,7 +796,7 @@ def main(page: ft.Page):
             refresh_badges()
             eta = (datetime.now() + timedelta(days=3)).strftime("%a, %d %b")
             popup([ft.Column([T("🎉", 56), T("Order placed!", 22, True),
-                              T(f"Order ID: {oid}", 13, True, PRIMARY), T(f"Total paid: {inr(total)}  •  {pay.value}", 12, color=MUTED),
+                              T(f"Order ID: {oid}", 13, True, PRIMARY), T(f"{'Pay on delivery' if label == 'Cash on Delivery' else 'Total paid'}: {inr(total)}  •  {label}", 12, color=MUTED),
                               T(f"Estimated delivery: {eta}", 12, color=MUTED)],
                              horizontal_alignment=ft.CrossAxisAlignment.CENTER, spacing=6),
                    wide("Continue Shopping", lambda e: close())])
@@ -711,13 +806,13 @@ def main(page: ft.Page):
         if disc:
             summary.append(line("Coupon discount", "-" + inr(disc), color=GREEN))
         summary.append(line("Delivery", "FREE" if ship == 0 else inr(ship)))
-        popup([T("Delivery details", 14, True), nm, ph_, addr, pin, T("Payment method", 14, True), pay,
+        popup([T("Delivery details", 14, True), nm, ph_, addr, pin, T("Payment method", 14, True), pay, upi_box, card_box,
                ft.Divider(height=1, color=BORDER)] + summary + [line("Total", inr(total), True),
                wide(f"Place Order • {inr(total)}", place)], "Checkout")
 
     # ---------- help / support ----------
     def open_help(e=None):
-        popup([T("We are here to help you 😊", 13, color=MUTED),
+        popup([T("Hum madad ke liye yahan hain 😊", 13, color=MUTED),
                ft.ListTile(leading=ft.Icon(ft.Icons.CHAT, color="#22c55e"), title=T("Chat on WhatsApp", 14, True),
                            on_click=lambda e: page.launch_url(WHATSAPP_URL)),
                ft.ListTile(leading=ft.Icon(ft.Icons.CALL, color=PRIMARY), title=T(SUPPORT_PHONE, 14, True),
@@ -820,6 +915,7 @@ def main(page: ft.Page):
             ft.Divider(height=1, color="#1e293b"),
             T(f"© {datetime.now().year} Gadget Hub. All rights reserved. Made with ❤️ in India", 11, color="#64748b",
               text_align=ft.TextAlign.CENTER),
+            T("crafted by Datta Joldapke", 9, color="#334155", text_align=ft.TextAlign.CENTER, italic=True),
         ], spacing=14), bgcolor=DARK, padding=ft.padding.only(left=20, right=20, top=26, bottom=90))
 
     # ---------- assemble page ----------
