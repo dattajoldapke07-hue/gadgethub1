@@ -5,7 +5,7 @@ import flet as ft
 # ================= THEME =================
 PRIMARY, DARK, MUTED, BORDER, BG = "#2563eb", "#0f172a", "#64748b", "#e2e8f0", "#f8fafc"
 INDIGO, GREEN, AMBER, RED = "#4f46e5", "#16a34a", "#f59e0b", "#ef4444"
-SUPPORT_PHONE = "+91 98765 43210"      # <- apna number daalein
+SUPPORT_PHONE = "+91 919561560448"      # <- apna number daalein
 SUPPORT_EMAIL = "support@gadgethub.in"  # <- apna email daalein
 WHATSAPP_URL = "https://wa.me/919561560448"  # <- apna WhatsApp number daalein
 
