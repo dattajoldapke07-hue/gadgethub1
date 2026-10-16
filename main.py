@@ -5,8 +5,8 @@ import flet as ft
 # ================= THEME =================
 PRIMARY, DARK, MUTED, BORDER, BG = "#2563eb", "#0f172a", "#64748b", "#e2e8f0", "#f8fafc"
 INDIGO, GREEN, AMBER, RED = "#4f46e5", "#16a34a", "#f59e0b", "#ef4444"
-SUPPORT_PHONE = "+91 9561560448"      # <- apna number daalein
-SUPPORT_EMAIL = "support@gadgethub.in"  # <- apna email daalein
+SUPPORT_PHONE = "+91 9561560448"      
+SUPPORT_EMAIL = "support@gadgethub.in"  
 WHATSAPP_URL = "https://wa.me/919561560448"  
 
 U = lambda i: f"https://images.unsplash.com/{i}?auto=format&fit=crop&w=800&q=80"
@@ -22,7 +22,7 @@ RAW = [
     (5, "Nothing Phone 4a Pro", S, 44999, 49999, 4.5, 97, "HOT", "https://m.media-amazon.com/images/I/31IpyH9EWuL._AC_UF1000,1000_QL80_.jpg", "Stylish smartphone with a unique design and smooth everyday performance."),
     (101, "vivo X300 FE", S, 84999, 96999, 4.5, 97, "HOT", "https://in-exstatic-vivofs.vivo.com/gdHFRinHEMrj3yPG/product/1786608927064/zip/img/wap/vivo-x300-fe.png", "Stylish smartphone with a unique design and smooth everyday performance."),
     (102, "Vivo X300 Ultra", S, 109999, 119999, 4.6, 143, "SUPER", "https://m.media-amazon.com/images/I/71ioZCO-biL._AC_UF1000,1000_QL80_.jpg", "Smart Android phone with excellent computational photography."),
-    # Xiaomi: pehle product-page link tha (image nahi), ab direct image URL
+   
     (103, "Xiaomi 15 Ultra", S, 109999, 119999, 4.6, 143, "SUPER", "https://fdn2.gsmarena.com/vv/bigpic/xiaomi-15-ultra.jpg", "16GB/512GB, 200 MP Leica quad camera, Snapdragon 8 Elite, WQHD+ AMOLED, Hyper AI."),
     (6, "ASUS Vivobook 16", L, 64999, 69999, 4.7, 184, "POPULAR", "https://m.media-amazon.com/images/I/71oGM-26fZL._SY450_.jpg", "Large-screen laptop for study, office work, coding and entertainment."),
     (7, "MacBook Air M5", L, 139490, 149900, 4.9, 325, "PREMIUM", "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/mba13-midnight-select-202503?wid=904&hei=840&fmt=jpeg&qlt=90&.v=1741885366392", "Thin and powerful laptop for productivity, creative work and everyday computing."),
@@ -49,14 +49,14 @@ RAW = [
     (27, "USB-C Hub 7-in-1", X, 2299, 2999, 4.5, 187, "POPULAR", "https://m.media-amazon.com/images/I/61tPYsj5cGL._SX522_.jpg", "Multi-port USB-C hub for laptops and modern devices."),
     (28, "Wireless Power Bank", X, 2999, 3999, 4.4, 231, "HOT", "https://www.ugreenindia.com/cdn/shop/files/51_L-fiALcL._AC_SL1500.jpg?v=1763828011&width=1125", "Portable power bank for convenient wireless and wired charging."),
     (29, "Premium Phone Case", X, 799, 1299, 4.3, 648, "SALE", "https://millioncases.com/cdn/shop/files/Untitled_Instagram_Post_45_1.jpg?v=1774600640&width=1200", "Premium protective phone case with a stylish design."),
-    # Action camera: pehla link CCTV camera ka tha (galat product) -> camera photo, purana link fallback
+   
     (30, "4K Action Camera", X, 15999, 18999, 4.6, 119, "NEW", "photo-1502920917128-1aa500764cbd", "Compact 4K action camera for travel, adventure and video recording."),
 ]
 KEYS = ("id", "name", "category", "price", "old", "rating", "reviews", "badge", "img", "desc")
 PRODUCTS = [dict(zip(KEYS, r)) for r in RAW]
 BY = {p["id"]: p for p in PRODUCTS}
 
-# Agar main image load na ho to ye backup images try honge (phir bhi fail ho to sundar placeholder)
+#
 ALT = {
     103: ["photo-1511707171634-5f897ff02aa9"],
     4: ["https://fdn2.gsmarena.com/vv/bigpic/google-pixel-10-pro.jpg"],
