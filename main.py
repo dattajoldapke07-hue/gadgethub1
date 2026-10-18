@@ -32,7 +32,7 @@ RAW = [
     (104, "Acer Aspire 5", L, 73990, 99999, 4.6, 121, "NEW", "https://media-ik.croma.com/Croma%20Assets/Computers%20Peripherals/Laptop/Images/323615_0_uEVNRr5R8Y.png?updatedAt=1783326915036&tr=w-360", "Modern performance laptop with a premium design and strong multitasking."),
     (11, "Sony WH-1000XM5", A, 29999, 34999, 4.9, 421, "BEST SELLER", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUoAnWrSiibSpVALlRvBbMZqOKozMWUYCFKxXraZxGeg&s=10", "Premium wireless headphones with powerful sound and noise cancellation."),
     (12, "Apple AirPods Pro", A, 24999, 26999, 4.8, 389, "POPULAR", "photo-1600294037681-c80b4cb5b434", "Premium wireless earbuds with active noise cancellation and immersive sound."),
-    (13, "JBL Tune 770NC", A, 5999, 7999, 4.6, 287, "VALUE", "photo-1484704849700-f032a568e944", "Comfortable wireless headphones with noise cancellation and long battery life."),
+    (13, "JBL Tune 770NC", A, 5999, 7999, 4.6, 287, "VALUE", "https://m.media-amazon.com/images/I/71PdaCws72L.jpg", "Comfortable wireless headphones with noise cancellation and long battery life."),
     (14, "Boat Airdopes Elite", A, 2499, 3499, 4.4, 632, "HOT", "photo-1590658268037-6bf12165a8df", "Affordable true wireless earbuds for music, calls and entertainment."),
     (15, "Bose SoundLink Speaker", A, 14999, 16999, 4.7, 178, "PREMIUM", "photo-1608043152269-423dbba4e7e1", "Portable Bluetooth speaker with rich, powerful audio."),
     (16, "PlayStation 5", G, 54999, 59999, 4.9, 516, "BEST SELLER", "photo-1606813907291-d86efa9b94db", "Next-generation console for immersive gaming and high-quality graphics."),
