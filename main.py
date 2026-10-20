@@ -978,4 +978,5 @@ def main(page: ft.Page):
     threading.Thread(target=ticker, daemon=True).start()
 
 
-ft.app(target=main)
+ft.app(target=main, view=ft.AppView.WEB_BROWSER,
+       port=int(os.getenv("PORT", 8000)), host="0.0.0.0")
