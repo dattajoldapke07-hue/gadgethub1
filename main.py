@@ -26,7 +26,7 @@ def P(i, name, cat, brand, price, old, rating, reviews, badge, desc, img=""):
 PRODUCTS = [
     # ---------------- SMARTPHONES ----------------
     # Apple (iOS)
-    P(210, "iPhone 17 Pro Max", S, "Apple", 149900, 159900, 4.9, 276, "NEW", "6.9-inch ProMotion OLED, A19 Pro chip, 48MP triple camera and all-day battery."),
+    P(210, "iPhone 17 Pro Max", S, "Apple", 149900, 159900, 4.9, 276, "NEW", "6.9-inch ProMotion OLED, A19 Pro chip, 48MP triple camera and all-day battery.","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTpG0GLhd4AbRKZiodjTELO_tfprgx7CWaNMsiOlENW6w&s"),
     P(211, "iPhone 17", S, "Apple", 82900, 89900, 4.8, 341, "TRENDING", "6.3-inch 120Hz display, A19 chip, 48MP dual camera and Ceramic Shield."),
     P(2, "iPhone 16 Pro", S, "Apple", 119999, 124999, 4.9, 512, "PREMIUM", "Premium smartphone with a powerful processor, pro camera system and stunning display.",
       "https://rukminim3.flixcart.com/image/480/640/xif0q/mobile/o/o/9/-resized-original-imahggev6y5zhbjz.jpeg?q=90"),
