@@ -222,6 +222,21 @@ BRAND_COL = {"Apple": "#64748b", "Samsung": "#1d4ed8", "vivo": "#2563eb", "OPPO"
              "Nintendo": "#dc2626", "Fitbit": "#14b8a6", "Amazfit": "#f59e0b", "Noise": "#a855f7", "Garmin": "#0891b2",
              "Anker": "#3b82f6", "Belkin": "#64748b", "Ugreen": "#10b981", "Spigen": "#ef4444", "GoPro": "#0ea5e9",
              "SanDisk": "#dc2626", "Gadget Hub": "#0d9488"}
+# ---- Brand logos ----
+# Logo lagane ke liye: apni image  assets/logos/<brand>.png  naam se rakh do (chhote akshar mein),
+# jaise assets/logos/vivo.png, assets/logos/oppo.png, assets/logos/apple.png.
+# File milte hi us brand ke tile par logo dikhne lagega, code badalne ki zaroorat nahi.
+ASSETS_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "assets")
+
+
+def brand_logo(b):
+    for ext in ("png", "jpg", "jpeg", "webp"):
+        name = f"{b.lower().replace(' ', '')}.{ext}"
+        if os.path.exists(os.path.join(ASSETS_DIR, "logos", name)):
+            return "/logos/" + name
+    return None
+
+
 TRENDING = ["iPhone", "OPPO", "vivo", "Gaming", "Laptop", "Watch"]
 
 # code: (kind, value, min order, description)
@@ -1044,8 +1059,9 @@ def main(page: ft.Page):
 
     def brand_tiles(title, sub, names):
         cards = [ft.Container(ft.Column([
-            ft.Container(T(b[:2].upper(), 16, True, "white"), width=58, height=58, border_radius=29,
-                         bgcolor=BRAND_COL.get(b, INDIGO), alignment=ft.alignment.center,
+            ft.Container(ft.Image(src=brand_logo(b), width=40, height=40, fit=ft.ImageFit.CONTAIN)
+                         if brand_logo(b) else T(b[:2].upper(), 16, True, "white"), width=58, height=58, border_radius=29,
+                         bgcolor="white" if brand_logo(b) else BRAND_COL.get(b, INDIGO), alignment=ft.alignment.center,
                          border=ft.border.all(2, ft.Colors.with_opacity(0.25, "white"))),
             T(b, 11, True, text_align=ft.TextAlign.CENTER)], horizontal_alignment=ft.CrossAxisAlignment.CENTER, spacing=6),
             width=84, on_click=lambda e, b=b: show_brand(b)) for b in names]
@@ -1237,6 +1253,6 @@ def main(page: ft.Page):
 if __name__ == "__main__":
     port = os.getenv("PORT")  # Render par PORT milta hai -> web mode; laptop/phone par normal app mode
     if port:
-        ft.app(target=main, view=ft.AppView.WEB_BROWSER, port=int(port), host="0.0.0.0")
+        ft.app(target=main, view=ft.AppView.WEB_BROWSER, port=int(port), host="0.0.0.0", assets_dir=ASSETS_DIR)
     else:
-        ft.app(target=main)
+        ft.app(target=main, assets_dir=ASSETS_DIR)
