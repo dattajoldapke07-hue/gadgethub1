@@ -69,7 +69,7 @@ PRODUCTS = [
     P(3, "OnePlus 13", S, "OnePlus", 69999, 74999, 4.7, 186, "TRENDING", "High-performance 5G smartphone with fast charging and a premium design.",
       "https://m.media-amazon.com/images/I/71vRZZ+FCiL._AC_UF1000,1000_QL80_.jpg"),
     P(260, "OnePlus 13R", S, "OnePlus", 42999, 46999, 4.6, 380, "TRENDING", "Snapdragon 8 Gen 3, 6000mAh battery and 80W charging.","https://m.media-amazon.com/images/I/61NOlG6S9CL._AC_UF1000,1000_QL80_.jpg"),
-    P(261, "OnePlus Nord 5", S, "OnePlus", 31999, 34999, 4.5, 450, "POPULAR", "Smooth 144Hz display, strong performance and clean OxygenOS.",""https://www.oneplus.in/content/dam/oneplus/2025/product-station/nord-5/assets/images-kv-phone-mo-1-95-ccea41.png.webp),
+    P(261, "OnePlus Nord 5", S, "OnePlus", 31999, 34999, 4.5, 450, "POPULAR", "Smooth 144Hz display, strong performance and clean OxygenOS.","https://www.oneplus.in/content/dam/oneplus/2025/product-station/nord-5/assets/images-kv-phone-mo-1-95-ccea41.png.webp"),
     P(262, "OnePlus Nord CE5", S, "OnePlus", 24999, 27999, 4.4, 390, "VALUE", "Big battery, fast charging and a bright AMOLED display.","https://m.media-amazon.com/images/I/61IOa9IrlaL._AC_UF1000,1000_QL80_.jpg"),
     P(263, "OnePlus Nord CE4 Lite 5G", S, "OnePlus", 17999, 19999, 4.3, 520, "BUDGET", "Everyday 5G phone with 80W SUPERVOOC and a 120Hz screen.","https://image01-in.oneplus.net/media/202406/19/ec64eb41a8e787a798be1b71c13a51bb.png"),
     # Nothing
