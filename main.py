@@ -222,6 +222,29 @@ BRAND_COL = {"Apple": "#64748b", "Samsung": "#1d4ed8", "vivo": "#2563eb", "OPPO"
              "Nintendo": "#dc2626", "Fitbit": "#14b8a6", "Amazfit": "#f59e0b", "Noise": "#a855f7", "Garmin": "#0891b2",
              "Anker": "#3b82f6", "Belkin": "#64748b", "Ugreen": "#10b981", "Spigen": "#ef4444", "GoPro": "#0ea5e9",
              "SanDisk": "#dc2626", "Gadget Hub": "#0d9488"}
+# ---- Brand logo URLs ----
+# Har brand ke aage apni image ka direct URL (.png/.jpg/.webp) paste karo. Bas yahi badalna hai.
+# Jis brand ka URL khaali ("") hai uska colour wala tile dikhega.
+BRAND_LOGO_URL = {
+    "Apple": "https://YAHAN-APPLE-LOGO-URL",
+    "Samsung": "https://YAHAN-SAMSUNG-LOGO-URL",
+    "vivo": "https://YAHAN-VIVO-LOGO-URL",
+    "OPPO": "https://YAHAN-OPPO-LOGO-URL",
+    "Xiaomi": "https://YAHAN-XIAOMI-LOGO-URL",
+    "Google": "https://YAHAN-GOOGLE-LOGO-URL",
+    "OnePlus": "https://YAHAN-ONEPLUS-LOGO-URL",
+    "Nothing": "https://YAHAN-NOTHING-LOGO-URL",
+    "ASUS": "https://YAHAN-ASUS-LOGO-URL",
+    "Acer": "https://YAHAN-ACER-LOGO-URL",
+    "Lenovo": "https://YAHAN-LENOVO-LOGO-URL",
+    "HP": "https://YAHAN-HP-LOGO-URL",
+    "Dell": "https://YAHAN-DELL-LOGO-URL",
+    "Sony": "https://YAHAN-SONY-LOGO-URL",
+    "JBL": "https://YAHAN-JBL-LOGO-URL",
+    "boAt": "https://YAHAN-BOAT-LOGO-URL",
+    "Bose": "https://YAHAN-BOSE-LOGO-URL",
+}
+
 # ---- Brand logos ----
 # Logo lagane ke liye: apni image  assets/logos/<brand>.png  naam se rakh do (chhote akshar mein),
 # jaise assets/logos/vivo.png, assets/logos/oppo.png, assets/logos/apple.png.
@@ -230,6 +253,9 @@ ASSETS_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "assets")
 
 
 def brand_logo(b):
+    u = (BRAND_LOGO_URL.get(b) or "").strip()
+    if u and "YAHAN-" not in u:  # sirf asli URL use hoga, placeholder nahi
+        return u
     for ext in ("png", "jpg", "jpeg", "webp"):
         name = f"{b.lower().replace(' ', '')}.{ext}"
         if os.path.exists(os.path.join(ASSETS_DIR, "logos", name)):
