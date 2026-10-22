@@ -26,9 +26,9 @@ PRODUCTS = [
     # ---------------- SMARTPHONES ----------------
     # Apple (iOS)
     P(210, "iPhone 17 Pro Max", S, "Apple", 149900, 159900, 4.9, 276, "NEW", "6.9-inch ProMotion OLED, A19 Pro chip, 48MP triple camera and all-day battery.","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTpG0GLhd4AbRKZiodjTELO_tfprgx7CWaNMsiOlENW6w&s"),
-    P(211, "iPhone 17", S, "Apple", 82900, 89900, 4.8, 341, "TRENDING", "6.3-inch 120Hz display, A19 chip, 48MP dual camera and Ceramic Shield.","https://www.apple.com/newsroom/images/2025/09/apple-debuts-iphone-17/tile/Apple-iPhone-17-hero-250909-lp.jpg.news_app_ed.jpg"),
+    P(211, "iPhone 17", S, "Apple", 82900, 89900, 4.8, 341, "TRENDING", "6.3-inch 120Hz display, A19 chip, 48MP dual camera and Ceramic Shield.","https://cdn.jiostore.online/v2/jmd-asp/jdprod/wrkr/products/pictures/item/free/original/apple/494741624/0/P4oU817Pfi-PoMNRJo4_h-Apple-iPhone17-494741624-i-1-1200Wx1200H.jpeg"),
     P(2, "iPhone 16 Pro", S, "Apple", 119999, 124999, 4.9, 512, "PREMIUM", "Premium smartphone with a powerful processor, pro camera system and stunning display.","https://m.media-amazon.com/images/I/61xJlx-3KDL._AC_UF894,1000_QL80_.jpg"),
-    P(212, "iPhone 16", S, "Apple", 69900, 79900, 4.8, 604, "BEST SELLER", "6.1-inch Super Retina XDR, A18 chip, Camera Control and 48MP Fusion camera.","https://www.myimaginestore.com/media/catalog/product/cache/350c0dac84622638a906c7177340801e/i/p/iphone_16_ultramarine_pdp_image_position_5__en-in_2_1.jpg"),
+    P(212, "iPhone 16", S, "Apple", 69900, 79900, 4.8, 604, "BEST SELLER", "6.1-inch Super Retina XDR, A18 chip, Camera Control and 48MP Fusion camera.","https://www.apple.com/newsroom/images/2024/09/apple-introduces-iphone-16-and-iphone-16-plus/article/geo/Apple-iPhone-16-hero-geo-240909_inline.jpg.large.jpg"),
     P(213, "iPhone 15", S, "Apple", 57900, 69900, 4.7, 720, "VALUE", "Dynamic Island, 48MP main camera, USB-C and great everyday performance.","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcReAzecANpfXBWDletx2KSHmcjZHUB7yB0LwFyJRKEr2UyZ8GbLzW9PxI8&s=10"),
     # Samsung
     P(1, "Samsung Galaxy S25", S, "Samsung", 74999, 79999, 4.8, 245, "BEST SELLER", "Premium flagship smartphone with powerful performance and an advanced camera.",
@@ -36,7 +36,7 @@ PRODUCTS = [
     P(200, "Samsung Galaxy S25 Ultra", S, "Samsung", 129999, 134999, 4.8, 389, "FLAGSHIP", "6.9-inch QHD+ AMOLED, 200MP camera, S Pen and Galaxy AI.","https://ankurelectricals.com/cdn/shop/files/TitaniumBlack.png?v=1739343916"),
     P(201, "Samsung Galaxy S25 FE", S, "Samsung", 59999, 65999, 4.6, 176, "NEW", "Fan Edition flagship with 50MP camera, 120Hz AMOLED and 4900mAh battery.","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_b5cL86300FuMBhfoQOOVlY5VIPyfPNw8GXNW5MnsEQ&s"),
     P(202, "Samsung Galaxy A56 5G", S, "Samsung", 41999, 46999, 4.5, 512, "POPULAR", "Super AMOLED display, 50MP OIS camera and 6 years of updates.","https://m.media-amazon.com/images/I/71Rg20kHfEL.jpg"),
-    P(203, "Samsung Galaxy Z Flip7", S, "Samsung", 109999, 119999, 4.7, 98, "FOLDABLE", "Pocket-size foldable with a big cover screen and Flex Mode.","https://mc.bajajfinserv.in/media/catalog/product/7/9/791130_base.jpeg"),
+    P(203, "Samsung Galaxy Z Flip7", S, "Samsung", 109999, 119999, 4.7, 98, "FOLDABLE", "Pocket-size foldable with a big cover screen and Flex Mode.","https://m.media-amazon.com/images/I/61ZtVMmiwML._AC_UF1000,1000_QL80_.jpg"),
     # vivo
     P(101, "vivo X300 FE", S, "vivo", 84999, 96999, 4.5, 97, "HOT", "Stylish smartphone with a unique design and smooth everyday performance.",
       "https://in-exstatic-vivofs.vivo.com/gdHFRinHEMrj3yPG/product/1786608927064/zip/img/wap/vivo-x300-fe.png"),
@@ -44,13 +44,13 @@ PRODUCTS = [
       "https://m.media-amazon.com/images/I/71ioZCO-biL._AC_UF1000,1000_QL80_.jpg"),
     P(220, "vivo X200 FE", S, "vivo", 54999, 59999, 4.5, 210, "HOT", "ZEISS-tuned camera, 6500mAh battery and a bright AMOLED display.","https://rukminim3.flixcart.com/image/480/640/xif0q/mobile/a/s/v/-original-imahe47svjqaq7pt.jpeg?q=80"),
     P(221, "vivo V60 5G", S, "vivo", 36999, 39999, 4.4, 330, "POPULAR", "Slim design, 50MP portrait camera and 90W fast charging.","https://cdn.jiostore.online/v2/jmd-asp/jdprod/wrkr/products/pictures/item/free/resize-w:450/vivo/494582788/0/LXaTSa-ldt-8Aum8YNcxs-VivoV60-494582788-i-1-1200Wx1200H.jpeg"),
-    P(222, "vivo T4 Pro", S, "vivo", 27999, 31999, 4.4, 415, "VALUE", "Big battery, curved AMOLED and smooth gaming performance.","https://mc.bajajfinserv.in/media/catalog/product/8/2/822178nitroblue_base.jpeg"),
+    P(222, "vivo T4 Pro", S, "vivo", 27999, 31999, 4.4, 415, "VALUE", "Big battery, curved AMOLED and smooth gaming performance.","https://in-exstatic-vivofs.vivo.com/gdHFRinHEMrj3yPG/1754996238690/8be7b122e979fb35532a8cac1c65b1b3.png"),
     # OPPO
     P(230, "OPPO Find X8 Pro", S, "OPPO", 99999, 109999, 4.7, 160, "PREMIUM", "Hasselblad quad camera, Dimensity 9400 and IP68/IP69 protection.","https://www.oppo.com/content/dam/oppo/common/mkt/v2-2/find-x8-series-en/find-x8-pro/products/932-720.png"),
     P(231, "OPPO Reno14 Pro 5G", S, "OPPO", 49999, 54999, 4.5, 290, "TRENDING", "Portrait-first camera, 6200mAh battery and a slim curved display.","https://rukminim2.flixcart.com/image/480/480/xif0q/mobile/u/a/s/-resized-original-imahfbyccy9kgvgm.jpeg?q=90"),
     P(232, "OPPO Reno14 5G", S, "OPPO", 37999, 41999, 4.4, 310, "POPULAR", "50MP triple camera, 80W SUPERVOOC charging and AMOLED screen.","https://m.media-amazon.com/images/I/71IKLHMlRBL._AC_UF1000,1000_QL80_.jpg"),
     P(233, "OPPO F29 Pro 5G", S, "OPPO", 27999, 30999, 4.3, 420, "NEW", "Rugged IP69 build, 6000mAh battery and a bright 120Hz display.","https://m.media-amazon.com/images/I/81a24Tvr+BL.jpg"),
-    P(234, "OPPO K13 5G", S, "OPPO", 17999, 20999, 4.3, 610, "VALUE", "7000mAh battery, 80W charging and a smooth 120Hz AMOLED.","https://cdn.mobilekidukaan.in/refubished/01745679269.jpg"),
+    P(234, "OPPO K13 5G", S, "OPPO", 17999, 20999, 4.3, 610, "VALUE", "7000mAh battery, 80W charging and a smooth 120Hz AMOLED.","https://fdn2.gsmarena.com/vv/bigpic/oppo-k13-5g.jpg"),
     # Xiaomi
     P(103, "Xiaomi 15 Ultra", S, "Xiaomi", 109999, 119999, 4.6, 143, "SUPER", "16GB/512GB, 200 MP Leica quad camera, Snapdragon 8 Elite, WQHD+ AMOLED, Hyper AI.",
       "https://i02.appmifile.com/869_operator_sg/19/02/2025/8ef3aa5e5645d64a9e182ecc84e8d365.png"),
