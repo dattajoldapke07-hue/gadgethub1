@@ -222,33 +222,28 @@ BRAND_COL = {"Apple": "#64748b", "Samsung": "#1d4ed8", "vivo": "#2563eb", "OPPO"
              "Nintendo": "#dc2626", "Fitbit": "#14b8a6", "Amazfit": "#f59e0b", "Noise": "#a855f7", "Garmin": "#0891b2",
              "Anker": "#3b82f6", "Belkin": "#64748b", "Ugreen": "#10b981", "Spigen": "#ef4444", "GoPro": "#0ea5e9",
              "SanDisk": "#dc2626", "Gadget Hub": "#0d9488"}
-# ---- Brand logo URLs ----
-# Har brand ke aage apni image ka direct URL (.png/.jpg/.webp) paste karo. Bas yahi badalna hai.
-# Jis brand ka URL khaali ("") hai uska colour wala tile dikhega.
+
 BRAND_LOGO_URL = {
-    "Apple": "https://YAHAN-APPLE-LOGO-URL",
-    "Samsung": "https://YAHAN-SAMSUNG-LOGO-URL",
-    "vivo": "https://YAHAN-VIVO-LOGO-URL",
-    "OPPO": "https://YAHAN-OPPO-LOGO-URL",
-    "Xiaomi": "https://YAHAN-XIAOMI-LOGO-URL",
-    "Google": "https://YAHAN-GOOGLE-LOGO-URL",
-    "OnePlus": "https://YAHAN-ONEPLUS-LOGO-URL",
-    "Nothing": "https://YAHAN-NOTHING-LOGO-URL",
-    "ASUS": "https://YAHAN-ASUS-LOGO-URL",
-    "Acer": "https://YAHAN-ACER-LOGO-URL",
-    "Lenovo": "https://YAHAN-LENOVO-LOGO-URL",
-    "HP": "https://YAHAN-HP-LOGO-URL",
-    "Dell": "https://YAHAN-DELL-LOGO-URL",
-    "Sony": "https://YAHAN-SONY-LOGO-URL",
-    "JBL": "https://YAHAN-JBL-LOGO-URL",
-    "boAt": "https://YAHAN-BOAT-LOGO-URL",
-    "Bose": "https://YAHAN-BOSE-LOGO-URL",
+    "Apple": "https://cdn-icons-png.flaticon.com/512/0/747.png",
+    "Samsung": "https://img.icons8.com/color/1200/samsung.jpg",
+    "vivo": "https://static.vecteezy.com/system/resources/previews/054/650/800/non_2x/vivo-logo-rounded-vivo-logo-free-png.png",
+    "OPPO": "https://images.seeklogo.com/logo-png/35/1/oppo-logo-png_seeklogo-350834.png",
+    "Xiaomi": "https://images.seeklogo.com/logo-png/40/1/xiaomi-new-2021-logo-png_seeklogo-400999.png",
+    "Google": "https://static.vecteezy.com/system/resources/thumbnails/059/494/413/small/google-pixel-mobile-company-brand-official-logo-icon-and-symbol-high-quality-digital-download-free-vector.jpg",
+    "OnePlus": "https://images.seeklogo.com/logo-png/36/1/oneplus-1-logo-png_seeklogo-361742.png",
+    "Nothing": "https://images.indianexpress.com/2021/07/Nothing-logo.jpg",
+    "ASUS": "https://images.seeklogo.com/logo-png/50/2/asus-logo-png_seeklogo-500532.png",
+    "Acer": "https://static.vecteezy.com/system/resources/previews/019/136/409/non_2x/acer-logo-acer-icon-free-free-vector.jpg",
+    "Lenovo": "https://images.seeklogo.com/logo-png/26/2/lenovo-logo-png_seeklogo-267847.png",
+    "HP": "https://1000logos.net/wp-content/uploads/2017/02/HP-Logo-2009.jpg",
+    "Dell": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqakWccghf-8cR53geLzxmBlABCglHA2WeD1YNYw6ljw&s",
+    "Sony": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTDju2PHimiCzI97e67jYtNtAxbB2f3944dgzEkVC-Q9A&s",
+    "JBL": "https://1000logos.net/wp-content/uploads/2023/07/JBL-logo.jpg",
+    "boAt": "https://images.seeklogo.com/logo-png/37/1/boat-logo-png_seeklogo-379185.png",
+    "Bose": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ0fvxIoptkwBVAb06Bp9QTGp8ONKtF65GqwuPAFYOPuYZfRGkkslkuOr7t&s=10",
 }
 
-# ---- Brand logos ----
-# Logo lagane ke liye: apni image  assets/logos/<brand>.png  naam se rakh do (chhote akshar mein),
-# jaise assets/logos/vivo.png, assets/logos/oppo.png, assets/logos/apple.png.
-# File milte hi us brand ke tile par logo dikhne lagega, code badalne ki zaroorat nahi.
+
 ASSETS_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "assets")
 
 
