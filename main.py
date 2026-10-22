@@ -27,18 +27,17 @@ PRODUCTS = [
     # ---------------- SMARTPHONES ----------------
     # Apple (iOS)
     P(210, "iPhone 17 Pro Max", S, "Apple", 149900, 159900, 4.9, 276, "NEW", "6.9-inch ProMotion OLED, A19 Pro chip, 48MP triple camera and all-day battery.","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTpG0GLhd4AbRKZiodjTELO_tfprgx7CWaNMsiOlENW6w&s"),
-    P(211, "iPhone 17", S, "Apple", 82900, 89900, 4.8, 341, "TRENDING", "6.3-inch 120Hz display, A19 chip, 48MP dual camera and Ceramic Shield."),
-    P(2, "iPhone 16 Pro", S, "Apple", 119999, 124999, 4.9, 512, "PREMIUM", "Premium smartphone with a powerful processor, pro camera system and stunning display.",
-      "https://rukminim3.flixcart.com/image/480/640/xif0q/mobile/o/o/9/-resized-original-imahggev6y5zhbjz.jpeg?q=90"),
-    P(212, "iPhone 16", S, "Apple", 69900, 79900, 4.8, 604, "BEST SELLER", "6.1-inch Super Retina XDR, A18 chip, Camera Control and 48MP Fusion camera."),
-    P(213, "iPhone 15", S, "Apple", 57900, 69900, 4.7, 720, "VALUE", "Dynamic Island, 48MP main camera, USB-C and great everyday performance."),
+    P(211, "iPhone 17", S, "Apple", 82900, 89900, 4.8, 341, "TRENDING", "6.3-inch 120Hz display, A19 chip, 48MP dual camera and Ceramic Shield.","https://www.apple.com/newsroom/images/2025/09/apple-debuts-iphone-17/tile/Apple-iPhone-17-hero-250909-lp.jpg.news_app_ed.jpg"),
+    P(2, "iPhone 16 Pro", S, "Apple", 119999, 124999, 4.9, 512, "PREMIUM", "Premium smartphone with a powerful processor, pro camera system and stunning display.","https://m.media-amazon.com/images/I/61xJlx-3KDL._AC_UF894,1000_QL80_.jpg"),
+    P(212, "iPhone 16", S, "Apple", 69900, 79900, 4.8, 604, "BEST SELLER", "6.1-inch Super Retina XDR, A18 chip, Camera Control and 48MP Fusion camera.","https://www.myimaginestore.com/media/catalog/product/cache/350c0dac84622638a906c7177340801e/i/p/iphone_16_ultramarine_pdp_image_position_5__en-in_2_1.jpg"),
+    P(213, "iPhone 15", S, "Apple", 57900, 69900, 4.7, 720, "VALUE", "Dynamic Island, 48MP main camera, USB-C and great everyday performance.","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcReAzecANpfXBWDletx2KSHmcjZHUB7yB0LwFyJRKEr2UyZ8GbLzW9PxI8&s=10"),
     # Samsung
     P(1, "Samsung Galaxy S25", S, "Samsung", 74999, 79999, 4.8, 245, "BEST SELLER", "Premium flagship smartphone with powerful performance and an advanced camera.",
       "https://images.samsung.com/is/image/samsung/p6pim/in/feature/165835044/in-feature-galaxy-s25-s931-544962134?$FB_TYPE_A_MO_JPG$"),
-    P(200, "Samsung Galaxy S25 Ultra", S, "Samsung", 129999, 134999, 4.8, 389, "FLAGSHIP", "6.9-inch QHD+ AMOLED, 200MP camera, S Pen and Galaxy AI."),
-    P(201, "Samsung Galaxy S25 FE", S, "Samsung", 59999, 65999, 4.6, 176, "NEW", "Fan Edition flagship with 50MP camera, 120Hz AMOLED and 4900mAh battery."),
-    P(202, "Samsung Galaxy A56 5G", S, "Samsung", 41999, 46999, 4.5, 512, "POPULAR", "Super AMOLED display, 50MP OIS camera and 6 years of updates."),
-    P(203, "Samsung Galaxy Z Flip7", S, "Samsung", 109999, 119999, 4.7, 98, "FOLDABLE", "Pocket-size foldable with a big cover screen and Flex Mode."),
+    P(200, "Samsung Galaxy S25 Ultra", S, "Samsung", 129999, 134999, 4.8, 389, "FLAGSHIP", "6.9-inch QHD+ AMOLED, 200MP camera, S Pen and Galaxy AI.","https://ankurelectricals.com/cdn/shop/files/TitaniumBlack.png?v=1739343916"),
+    P(201, "Samsung Galaxy S25 FE", S, "Samsung", 59999, 65999, 4.6, 176, "NEW", "Fan Edition flagship with 50MP camera, 120Hz AMOLED and 4900mAh battery.","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_b5cL86300FuMBhfoQOOVlY5VIPyfPNw8GXNW5MnsEQ&s"),
+    P(202, "Samsung Galaxy A56 5G", S, "Samsung", 41999, 46999, 4.5, 512, "POPULAR", "Super AMOLED display, 50MP OIS camera and 6 years of updates.","https://m.media-amazon.com/images/I/71Rg20kHfEL.jpg"),
+    P(203, "Samsung Galaxy Z Flip7", S, "Samsung", 109999, 119999, 4.7, 98, "FOLDABLE", "Pocket-size foldable with a big cover screen and Flex Mode.","https://mc.bajajfinserv.in/media/catalog/product/7/9/791130_base.jpeg"),
     # vivo
     P(101, "vivo X300 FE", S, "vivo", 84999, 96999, 4.5, 97, "HOT", "Stylish smartphone with a unique design and smooth everyday performance.",
       "https://in-exstatic-vivofs.vivo.com/gdHFRinHEMrj3yPG/product/1786608927064/zip/img/wap/vivo-x300-fe.png"),
