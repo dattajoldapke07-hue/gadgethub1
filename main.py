@@ -145,19 +145,19 @@ PRODUCTS = [
     P(411, "Samsung Galaxy Buds FE", A, "Samsung", 5999, 8999, 4.3, 310, "VALUE", "Active noise cancelling buds at an easy price.","https://m.media-amazon.com/images/I/51TaSV5ZC6L.jpg"),
 
     # ---------------- GAMING ----------------
-    P(16, "PlayStation 5", G, "Sony", 54999, 59999, 4.9, 516, "BEST SELLER", "Next-generation console for immersive gaming and high-quality graphics.", "photo-1606813907291-d86efa9b94db"),
-    P(420, "PS5 DualSense Controller", G, "Sony", 5999, 6999, 4.8, 420, "POPULAR", "Haptic feedback and adaptive triggers for deeper gameplay."),
-    P(17, "Xbox Series X", G, "Microsoft", 52999, 57999, 4.8, 321, "POPULAR", "Powerful console with fast performance and high-quality gaming.", "photo-1621259182978-fbf93132d53d"),
-    P(421, "Xbox Wireless Controller", G, "Microsoft", 5499, 6499, 4.7, 300, "HOT", "Classic comfort with textured grips and Bluetooth."),
-    P(422, "Nintendo Switch 2", G, "Nintendo", 39999, 44999, 4.8, 210, "NEW", "Next-gen hybrid console for TV and handheld play."),
-    P(426, "ASUS ROG Ally X", G, "ASUS", 79999, 89999, 4.6, 90, "GAMING", "Handheld Windows gaming PC with a big battery."),
-    P(423, "Logitech G502 X Mouse", G, "Logitech", 5995, 7495, 4.7, 260, "HOT", "Hero 25K sensor and ultra-fast LIGHTFORCE switches."),
-    P(427, "Logitech G Pro X Headset", G, "Logitech", 8995, 10995, 4.6, 140, "GAMING", "Pro-grade gaming headset with clear mic."),
-    P(424, "Razer BlackWidow V4 X", G, "Razer", 10999, 13999, 4.6, 150, "PREMIUM", "Mechanical RGB keyboard with macro keys."),
-    P(425, "Razer DeathAdder V3 Pro", G, "Razer", 12999, 15999, 4.7, 120, "PREMIUM", "Ultra-light wireless esports mouse."),
-    P(18, "Gaming RGB Keyboard", G, "Gadget Hub", 3499, 4999, 4.6, 215, "SALE", "Mechanical gaming keyboard with RGB lighting and responsive keys.", "photo-1587829741301-dc798b83add3"),
-    P(19, "Pro Gaming Mouse", G, "Gadget Hub", 2499, 3299, 4.7, 194, "HOT", "High-precision gaming mouse with an ergonomic design.", "photo-1527814050087-3793815479db"),
-    P(20, "Gaming Headset RGB", G, "Gadget Hub", 3999, 4999, 4.5, 143, "GAMING", "Gaming headset with immersive audio, microphone and RGB lighting.", "photo-1599669454699-248893623440"),
+    P(16, "PlayStation 5", G, "Sony", 54999, 59999, 4.9, 516, "BEST SELLER", "Next-generation console for immersive gaming and high-quality graphics.", "https://i5.walmartimages.com/asr/9242ff8b-093d-4592-a5bc-e738b77d0ff0.bf9da4688fedbd1192f0e8f97ac3f726.jpeg"),
+    P(420, "PS5 DualSense Controller", G, "Sony", 5999, 6999, 4.8, 420, "POPULAR", "Haptic feedback and adaptive triggers for deeper gameplay.","https://m.media-amazon.com/images/I/61Q1Pa4X4-L.jpg"),
+    P(17, "Xbox Series X", G, "Microsoft", 52999, 57999, 4.8, 321, "POPULAR", "Powerful console with fast performance and high-quality gaming.", "https://www.designinfo.in/wp-content/uploads/2022/09/Microsoft-Xbox-Series-X-2TB-Console-Galaxy-Black-Special-Edition-2-485x485.webp"),
+    P(421, "Xbox Wireless Controller", G, "Microsoft", 5499, 6499, 4.7, 300, "HOT", "Classic comfort with textured grips and Bluetooth.","https://m.media-amazon.com/images/I/71ZSva8pLSL._AC_UF894,1000_QL80_.jpg"),
+    P(422, "Nintendo Switch 2", G, "Nintendo", 39999, 44999, 4.8, 210, "NEW", "Next-gen hybrid console for TV and handheld play.","https://rukmini1.flixcart.com/image/1500/1500/xif0q/gamingconsole/i/k/9/play-tv-tabletop-or-handheld-with-4k-hdr-built-in-gamechat-video-original-imaheph7q2snqnhy.jpeg?q=70"),
+    P(426, "ASUS ROG Ally X", G, "ASUS", 79999, 89999, 4.6, 90, "GAMING", "Handheld Windows gaming PC with a big battery.","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTB8ZRcHD2aZMCe3EsRlz6yV7SK_m6nQcAF4NfwuWO0oto0xwL9uYbcrV7O&s=10"),
+    P(423, "Logitech G502 X Mouse", G, "Logitech", 5995, 7495, 4.7, 260, "HOT", "Hero 25K sensor and ultra-fast LIGHTFORCE switches.","https://m.media-amazon.com/images/I/51BF3dJHWKL._AC_UF1000,1000_QL80_.jpg"),
+    P(427, "Logitech G Pro X Headset", G, "Logitech", 8995, 10995, 4.6, 140, "GAMING", "Pro-grade gaming headset with clear mic.","https://m.media-amazon.com/images/I/61bDCk+O+pL.jpg"),
+    P(424, "Razer BlackWidow V4 X", G, "Razer", 10999, 13999, 4.6, 150, "PREMIUM", "Mechanical RGB keyboard with macro keys.","https://m.media-amazon.com/images/I/71qoXjgRb-L._AC_UF1000,1000_QL80_.jpg"),
+    P(425, "Razer DeathAdder V3 Pro", G, "Razer", 12999, 15999, 4.7, 120, "PREMIUM", "Ultra-light wireless esports mouse.","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRoqTOJATuEePL9Vduxw73PVCD0FROMfnr6SpIv0T4pn-dcy--iSyQWWljh&s=10"),
+    P(18, "Gaming RGB Keyboard", G, "Gadget Hub", 3499, 4999, 4.6, 215, "SALE", "Mechanical gaming keyboard with RGB lighting and responsive keys.", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9sa7KbbahYXQbckKACPPkf5sbpRcuZCiqJf0i5FyAlQ&s=10"),
+    P(19, "Pro Gaming Mouse", G, "Gadget Hub", 2499, 3299, 4.7, 194, "HOT", "High-precision gaming mouse with an ergonomic design.", "https://m.media-amazon.com/images/I/61Bm7AI-wOL.jpg"),
+    P(20, "Gaming Headset RGB", G, "Gadget Hub", 3999, 4999, 4.5, 143, "GAMING", "Gaming headset with immersive audio, microphone and RGB lighting.", "https://m.media-amazon.com/images/I/61Cpww1Dn-L.jpg"),
 
     # ---------------- WEARABLES ----------------
     P(21, "Apple Watch Series 11", W_, "Apple", 46999, 49999, 4.8, 278, "PREMIUM", "Premium smartwatch with notifications, fitness features and modern design.",
@@ -1047,7 +1047,7 @@ def main(page: ft.Page):
 
     # ---------- help / support ----------
     def open_help(e=None):
-        popup([T("Hum madad ke liye yahan hain 😊", 13, color=MUTED),
+        popup([T("We Are Here To Help You 😊", 13, color=MUTED),
                ft.ListTile(leading=ft.Icon(ft.Icons.CHAT, color="#22c55e"), title=T("Chat on WhatsApp", 14, True),
                            on_click=lambda e: page.launch_url(WHATSAPP_URL)),
                ft.ListTile(leading=ft.Icon(ft.Icons.CALL, color=PRIMARY), title=T(SUPPORT_PHONE, 14, True),
