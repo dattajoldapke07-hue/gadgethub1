@@ -2,7 +2,7 @@ import hashlib, json, os, re, secrets, threading, time
 from datetime import datetime, timedelta
 import flet as ft
 
-# ================= THEME (premium midnight + gold + teal) =================
+
 BG, SURF, SURF2, BORDER = "#070d1c", "#0f1a33", "#16233f", "#25375d"
 TEXT, MUTED = "#eef2ff", "#93a4c3"
 PRIMARY, GOLD, DARK = "#2dd4bf", "#f2c14e", "#070d1c"
@@ -1018,7 +1018,7 @@ def main(page: ft.Page):
             err = pay_error()
             if err:
                 return toast(err)
-            label = pay_label()  # only a masked label is stored; card number/CVV/expiry are never saved
+            label = pay_label() 
             oid = "GH" + datetime.now().strftime("%y%m%d%H%M%S")
             order = {"id": oid, "date": datetime.now().strftime("%d %b %Y, %I:%M %p"), "pay": label, "status": "Confirmed",
                      "total": total, "items": [[BY[int(k)]["name"], q, BY[int(k)]["price"]] for k, q in db["cart"].items()],
@@ -1270,7 +1270,7 @@ def main(page: ft.Page):
 
 
 if __name__ == "__main__":
-    port = os.getenv("PORT")  # Render par PORT milta hai -> web mode; laptop/phone par normal app mode
+    port = os.getenv("PORT")  
     if port:
         ft.app(target=main, view=ft.AppView.WEB_BROWSER, port=int(port), host="0.0.0.0", assets_dir=ASSETS_DIR)
     else:
