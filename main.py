@@ -7,18 +7,17 @@ BG, SURF, SURF2, BORDER = "#070d1c", "#0f1a33", "#16233f", "#25375d"
 TEXT, MUTED = "#eef2ff", "#93a4c3"
 PRIMARY, GOLD, DARK = "#2dd4bf", "#f2c14e", "#070d1c"
 INDIGO, GREEN, AMBER, RED = "#6366f1", "#22c55e", "#fbbf24", "#f43f5e"
-PHOTO = "#f1f5f9"  # product photo background (light, so product photos look clean)
-SUPPORT_PHONE = "+91 98765 43210"      # <- apna number daalein
-SUPPORT_EMAIL = "support@gadgethub.in"  # <- apna email daalein
-WHATSAPP_URL = "https://wa.me/919876543210"  # <- apna WhatsApp number daalein
+PHOTO = "#f1f5f9" 
+SUPPORT_PHONE = "+91 9561560448"     
+SUPPORT_EMAIL = "support@gadgethub.in"  
+WHATSAPP_URL = "https://wa.me/919561560448"  
 
 U = lambda i: f"https://images.unsplash.com/{i}?auto=format&fit=crop&w=800&q=80"
 S, L, A, G, W_, X = "Smartphones", "Laptops", "Audio", "Gaming", "Wearables", "Accessories"
 
 
 def P(i, name, cat, brand, price, old, rating, reviews, badge, desc, img=""):
-    # img khaali chhodoge to brand-colour wala sundar placeholder dikhega.
-    # Real photo lagani ho to img="https://...jpg" daal do.
+  
     return dict(id=i, name=name, category=cat, brand=brand, price=price, old=old, rating=rating,
                 reviews=reviews, badge=badge, img=img, desc=desc)
 
@@ -127,23 +126,23 @@ PRODUCTS = [
     P(354, "Dell Latitude 5450", L, "Dell", 84990, 96990, 4.4, 110, "BUSINESS", "Secure, durable business laptop with long battery life.","https://m.media-amazon.com/images/I/51kAOLVS21L._AC_UF1000,1000_QL80_.jpg"),
 
     # ---------------- AUDIO ----------------
-    P(11, "Sony WH-1000XM5", A, "Sony", 29999, 34999, 4.9, 421, "BEST SELLER", "Premium wireless headphones with powerful sound and noise cancellation.", "photo-1505740420928-5e560c06d30e"),
-    P(400, "Sony WF-1000XM5", A, "Sony", 19990, 24990, 4.7, 260, "PREMIUM", "Industry-leading noise cancelling true wireless earbuds."),
-    P(401, "Sony WH-CH720N", A, "Sony", 8990, 14990, 4.5, 420, "VALUE", "Light noise cancelling headphones with 35-hour battery."),
-    P(12, "Apple AirPods Pro", A, "Apple", 24999, 26999, 4.8, 389, "POPULAR", "Premium wireless earbuds with active noise cancellation and immersive sound.", "photo-1600294037681-c80b4cb5b434"),
-    P(402, "Apple AirPods Max", A, "Apple", 59900, 67900, 4.7, 150, "PREMIUM", "High-fidelity over-ear headphones with spatial audio."),
-    P(403, "Apple AirPods 4", A, "Apple", 12900, 14900, 4.6, 380, "POPULAR", "Comfortable open-fit earbuds with great sound."),
+    P(11, "Sony WH-1000XM5", A, "Sony", 29999, 34999, 4.9, 421, "BEST SELLER", "Premium wireless headphones with powerful sound and noise cancellation.", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTkXjEvJus8EKIzU93y1fEN7xAXLEfJ-pNpgu2XTN1EEljQJni55p49PfM&s=10"),
+    P(400, "Sony WF-1000XM5", A, "Sony", 19990, 24990, 4.7, 260, "PREMIUM", "Industry-leading noise cancelling true wireless earbuds.","https://media-ik.croma.com/Croma%20Assets/Entertainment/Wireless%20Earbuds/Images/301585_0_k1wlia.png"),
+    P(401, "Sony WH-CH720N", A, "Sony", 8990, 14990, 4.5, 420, "VALUE", "Light noise cancelling headphones with 35-hour battery.","https://shopatsc.com/cdn/shop/products/CH720_2500x2500_Blue_A.jpg?v=1688454066"),
+    P(12, "Apple AirPods Pro", A, "Apple", 24999, 26999, 4.8, 389, "POPULAR", "Premium wireless earbuds with active noise cancellation and immersive sound.", "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/airpods-pro-3-gallery-3-202509?wid=2824&hei=2400&fmt=jpeg&qlt=90&.v=VVlaMW5JSkUyd3UxWHhFZ0xURzk0M2hoYzZObTcwNnZlRFZlWDhUM3llQXFlellpcE56OWNsOHBzVkJLWjdrYWJGcXNRQnFCV0w3WVRjTExvdm1ic2F2VkU1eS80c3dEZ2V6MllJa2Q1QTEyUXQrc1F4VFIwcWJZNzNTUVpwSTY"),
+    P(402, "Apple AirPods Max", A, "Apple", 59900, 67900, 4.7, 150, "PREMIUM", "High-fidelity over-ear headphones with spatial audio.","https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/airpods-max-hero-select-202409_FMT_WHH?wid=752&hei=636&fmt=jpeg&qlt=90&.v=WXBZVEZCOUNiUWlBYUtjZmtBc0J2MGkxeEVQUXVsbFk4WEhBc0JFOWdSN2pmMHBIdXRoME5iSzRYUmF4Y3dVRy81NGMrcU1sYkxwTFJaVHI1NEQzenBJRnRzZXYwZVJMZmZQVjdBR0RkVVNpdi91OXpsc3gvUHZvVGU1aUpOaFE"),
+    P(403, "Apple AirPods 4", A, "Apple", 12900, 14900, 4.6, 380, "POPULAR", "Comfortable open-fit earbuds with great sound.","https://cdsassets.apple.com/live/7WUAS350/images/tech-specs/121203-airpods-4.png"),
     P(13, "JBL Tune 770NC", A, "JBL", 5999, 7999, 4.6, 287, "VALUE", "Comfortable wireless headphones with noise cancellation and long battery life.", "photo-1484704849700-f032a568e944"),
-    P(404, "JBL Flip 6", A, "JBL", 8999, 11999, 4.6, 520, "POPULAR", "Portable waterproof speaker with punchy JBL sound."),
-    P(405, "JBL Charge 5", A, "JBL", 13999, 17999, 4.7, 330, "BEST SELLER", "Powerful speaker with 20-hour battery and power-bank feature."),
-    P(14, "Boat Airdopes Elite", A, "boAt", 2499, 3499, 4.4, 632, "HOT", "Affordable true wireless earbuds for music, calls and entertainment.", "photo-1590658268037-6bf12165a8df"),
-    P(406, "boAt Rockerz 551 ANC", A, "boAt", 1799, 4999, 4.3, 900, "SALE", "Wireless headphones with ANC and 100-hour playback."),
-    P(407, "boAt Stone 352 Speaker", A, "boAt", 1599, 3999, 4.2, 810, "VALUE", "Compact Bluetooth speaker with strong bass."),
-    P(15, "Bose SoundLink Speaker", A, "Bose", 14999, 16999, 4.7, 178, "PREMIUM", "Portable Bluetooth speaker with rich, powerful audio.", "photo-1608043152269-423dbba4e7e1"),
-    P(408, "Bose QuietComfort Ultra", A, "Bose", 34999, 39999, 4.8, 170, "PREMIUM", "World-class noise cancelling with immersive spatial audio."),
-    P(409, "Bose QuietComfort Earbuds", A, "Bose", 24999, 29999, 4.6, 140, "POPULAR", "Comfortable earbuds with excellent noise cancellation."),
-    P(410, "Samsung Galaxy Buds3 Pro", A, "Samsung", 17999, 21999, 4.5, 230, "NEW", "Hi-Fi sound with intelligent ANC for Galaxy phones."),
-    P(411, "Samsung Galaxy Buds FE", A, "Samsung", 5999, 8999, 4.3, 310, "VALUE", "Active noise cancelling buds at an easy price."),
+    P(404, "JBL Flip 6", A, "JBL", 8999, 11999, 4.6, 520, "POPULAR", "Portable waterproof speaker with punchy JBL sound.","https://in.jbl.com/dw/image/v2/BFND_PRD/on/demandware.static/-/Sites-masterCatalog_Harman/default/dwf0f285ee/2_JBL_FLIP6_3_4_RIGHT_BLUE_30192_x1.png?sw=535&sh=535"),
+    P(405, "JBL Charge 5", A, "JBL", 13999, 17999, 4.7, 330, "BEST SELLER", "Powerful speaker with 20-hour battery and power-bank feature.","https://m.media-amazon.com/images/I/719nhErutkL._AC_UF1000,1000_QL80_.jpg"),
+    P(14, "Boat Airdopes Elite", A, "boAt", 2499, 3499, 4.4, 632, "HOT", "Affordable true wireless earbuds for music, calls and entertainment.", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR4cqIiaG_wXqmGG3mtHbnkHopOL3SML_XiD_tgBolIOw&s"),
+    P(406, "boAt Rockerz 551 ANC", A, "boAt", 1799, 4999, 4.3, 900, "SALE", "Wireless headphones with ANC and 100-hour playback.","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSX3f4K63iWlH6mX8Kj46o20BCX5QLJ7GUxZkeIf9YGVtg7k_W-I2GoB4jE&s=10"),
+    P(407, "boAt Stone 352 Speaker", A, "boAt", 1599, 3999, 4.2, 810, "VALUE", "Compact Bluetooth speaker with strong bass.","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_7q-tZMpL8k50XZ7FI6W2k1JU8STmoJcCAYezlbByLhrX4t0g6T9Ws0J6&s=10"),
+    P(15, "Bose SoundLink Speaker", A, "Bose", 14999, 16999, 4.7, 178, "PREMIUM", "Portable Bluetooth speaker with rich, powerful audio.", "https://m.media-amazon.com/images/I/71FakKnKHWL.jpg"),
+    P(408, "Bose QuietComfort Ultra", A, "Bose", 34999, 39999, 4.8, 170, "PREMIUM", "World-class noise cancelling with immersive spatial audio.","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSg_TYLtfyUPqR8nOANJTx4p_A3wKD2dAqHgpStn96PoYWWUHGvGd_3YSOq&s=10"),
+    P(409, "Bose QuietComfort Earbuds", A, "Bose", 24999, 29999, 4.6, 140, "POPULAR", "Comfortable earbuds with excellent noise cancellation.","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQuhvmGgYCgdoi4bLIHNBE4GMSBCtqB7Qaj03sHpQNZR2ek0M6unXKskdM&s=10"),
+    P(410, "Samsung Galaxy Buds3 Pro", A, "Samsung", 17999, 21999, 4.5, 230, "NEW", "Hi-Fi sound with intelligent ANC for Galaxy phones.","https://m.media-amazon.com/images/I/71ke2BEdIhL.jpg"),
+    P(411, "Samsung Galaxy Buds FE", A, "Samsung", 5999, 8999, 4.3, 310, "VALUE", "Active noise cancelling buds at an easy price.","https://m.media-amazon.com/images/I/51TaSV5ZC6L.jpg"),
 
     # ---------------- GAMING ----------------
     P(16, "PlayStation 5", G, "Sony", 54999, 59999, 4.9, 516, "BEST SELLER", "Next-generation console for immersive gaming and high-quality graphics.", "photo-1606813907291-d86efa9b94db"),
